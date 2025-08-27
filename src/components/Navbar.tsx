@@ -1,11 +1,10 @@
 
 import React, { useState, useEffect } from 'react';
-import { Menu, X, ChevronDown } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { Menu, X } from 'lucide-react';
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,118 +18,103 @@ const Navbar = () => {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
-      setIsOpen(false);
+      setIsMobileMenuOpen(false);
     }
   };
 
+  const navItems = [
+    { label: 'Início', id: 'inicio' },
+    { label: 'Sobre', id: 'sobre' },
+    { label: 'Serviços', id: 'servicos' },
+    { label: 'Produtos', id: 'produtos' },
+    { label: 'Contato', id: 'contato' },
+  ];
+
   return (
     <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-white/95 backdrop-blur-sm shadow-lg' : 'bg-transparent'
+      isScrolled ? 'bg-background/95 backdrop-blur-sm shadow-sm' : 'bg-transparent'
     }`}>
-      <nav className="container mx-auto px-4 sm:px-6 lg:px-8 py-3 sm:py-4">
-        <div className="flex items-center justify-between">
+      <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Logo */}
-          <div className="flex items-center space-x-2 min-w-0 flex-shrink-0">
-            <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-br from-orange-500 to-orange-600 rounded-lg flex items-center justify-center text-white font-bold text-lg sm:text-xl">
-              A
-            </div>
-            <div className="min-w-0">
-              <h2 className="text-lg sm:text-xl font-bold text-foreground truncate">ALD Química</h2>
-              <p className="text-xs text-muted-foreground hidden xs:block">Qualidade Garantida</p>
+          <div className="flex items-center space-x-3">
+            <img 
+              src="/lovable-uploads/9fd655b0-24cf-4fcd-bc3d-4589d709e69e.png" 
+              alt="ALD Química Logo" 
+              className="w-10 h-10 sm:w-12 sm:h-12"
+            />
+            <div className="text-lg sm:text-xl font-bold text-foreground">
+              ALD Química
             </div>
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-6 xl:space-x-8">
-            <button 
-              onClick={() => scrollToSection('inicio')}
-              className="text-foreground hover:text-orange-600 transition-colors font-medium text-sm xl:text-base"
+          <div className="hidden md:flex items-center space-x-1 lg:space-x-2">
+            {navItems.map((item) => (
+              <button
+                key={item.id}
+                onClick={() => scrollToSection(item.id)}
+                className="px-3 lg:px-4 py-2 text-sm lg:text-base text-muted-foreground hover:text-orange-600 transition-colors duration-200 font-medium"
+              >
+                {item.label}
+              </button>
+            ))}
+            <a 
+              href="https://wa.me/5519988788452"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="ml-4 inline-flex items-center px-4 lg:px-6 py-2 bg-orange-600 hover:bg-orange-700 text-white rounded-lg font-medium transition-colors text-sm lg:text-base gap-2"
             >
-              Início
-            </button>
-            <button 
-              onClick={() => scrollToSection('sobre')}
-              className="text-foreground hover:text-orange-600 transition-colors font-medium text-sm xl:text-base"
-            >
-              Sobre
-            </button>
-            <button 
-              onClick={() => scrollToSection('servicos')}
-              className="text-foreground hover:text-orange-600 transition-colors font-medium text-sm xl:text-base"
-            >
-              Serviços
-            </button>
-            <button 
-              onClick={() => scrollToSection('produtos')}
-              className="text-foreground hover:text-orange-600 transition-colors font-medium text-sm xl:text-base"
-            >
-              Produtos
-            </button>
-            <button 
-              onClick={() => scrollToSection('contato')}
-              className="text-foreground hover:text-orange-600 transition-colors font-medium text-sm xl:text-base"
-            >
+              <img 
+                src="/lovable-uploads/da61b6e2-e3db-4e7c-8fc3-ac2e51a8bbe7.png" 
+                alt="WhatsApp" 
+                className="w-4 h-4"
+              />
               Contato
-            </button>
-            <Button 
-              onClick={() => scrollToSection('contato')}
-              className="bg-orange-600 hover:bg-orange-700 text-white text-sm xl:text-base px-4 xl:px-6"
-            >
-              Fale Conosco
-            </Button>
+            </a>
           </div>
 
-          {/* Mobile Menu Button */}
-          <Button
-            variant="ghost"
-            size="icon"
-            className="lg:hidden w-8 h-8 sm:w-10 sm:h-10"
-            onClick={() => setIsOpen(!isOpen)}
+          {/* Mobile menu button */}
+          <button
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="md:hidden p-2 text-foreground hover:text-orange-600 transition-colors"
+            aria-label="Toggle menu"
           >
-            {isOpen ? <X className="h-5 w-5 sm:h-6 sm:w-6" /> : <Menu className="h-5 w-5 sm:h-6 sm:w-6" />}
-          </Button>
+            {isMobileMenuOpen ? (
+              <X className="h-6 w-6" />
+            ) : (
+              <Menu className="h-6 w-6" />
+            )}
+          </button>
         </div>
 
         {/* Mobile Navigation */}
-        {isOpen && (
-          <div className="lg:hidden mt-4 pb-4 border-t border-border">
-            <div className="flex flex-col space-y-3 pt-4">
-              <button 
-                onClick={() => scrollToSection('inicio')}
-                className="text-left text-foreground hover:text-orange-600 transition-colors font-medium py-2 px-1"
+        {isMobileMenuOpen && (
+          <div className="md:hidden bg-background/95 backdrop-blur-sm border-t border-border">
+            <div className="px-2 pt-2 pb-3 space-y-1">
+              {navItems.map((item) => (
+                <button
+                  key={item.id}
+                  onClick={() => scrollToSection(item.id)}
+                  className="block w-full text-left px-3 py-2 text-base text-muted-foreground hover:text-orange-600 hover:bg-muted/50 rounded-md transition-colors"
+                >
+                  {item.label}
+                </button>
+              ))}
+              <a 
+                href="https://wa.me/5519988788452"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center w-full px-3 py-2 mt-2 bg-orange-600 hover:bg-orange-700 text-white rounded-md font-medium transition-colors gap-2"
+                onClick={() => setIsMobileMenuOpen(false)}
               >
-                Início
-              </button>
-              <button 
-                onClick={() => scrollToSection('sobre')}
-                className="text-left text-foreground hover:text-orange-600 transition-colors font-medium py-2 px-1"
-              >
-                Sobre
-              </button>
-              <button 
-                onClick={() => scrollToSection('servicos')}
-                className="text-left text-foreground hover:text-orange-600 transition-colors font-medium py-2 px-1"
-              >
-                Serviços
-              </button>
-              <button 
-                onClick={() => scrollToSection('produtos')}
-                className="text-left text-foreground hover:text-orange-600 transition-colors font-medium py-2 px-1"
-              >
-                Produtos
-              </button>
-              <button 
-                onClick={() => scrollToSection('contato')}
-                className="text-left text-foreground hover:text-orange-600 transition-colors font-medium py-2 px-1"
-              >
-                Contato
-              </button>
-              <Button 
-                onClick={() => scrollToSection('contato')}
-                className="bg-orange-600 hover:bg-orange-700 text-white mt-2 w-full justify-start"
-              >
-                Fale Conosco
-              </Button>
+                <img 
+                  src="/lovable-uploads/da61b6e2-e3db-4e7c-8fc3-ac2e51a8bbe7.png" 
+                  alt="WhatsApp" 
+                  className="w-4 h-4"
+                />
+                Contato WhatsApp
+              </a>
             </div>
           </div>
         )}
