@@ -1,13 +1,12 @@
 
 import React from 'react';
 import { MapPin, Phone, Mail, Clock, Instagram, Facebook } from 'lucide-react';
-import ContactMap from '@/components/ContactMap';
 
 const Contact = () => {
   return (
     <section id="contato" className="py-12 sm:py-16 lg:py-20 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-4xl mx-auto">
           {/* Header */}
           <div className="text-center mb-12 sm:mb-16">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4">
@@ -18,10 +17,10 @@ const Contact = () => {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
-            {/* Contact Info */}
+          {/* Contact Info - Centered */}
+          <div className="max-w-2xl mx-auto">
             <div className="space-y-6 sm:space-y-8">
-              <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-4 sm:mb-6">Informações de Contato</h3>
+              <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-4 sm:mb-6 text-center">Informações de Contato</h3>
               
               <div className="space-y-4 sm:space-y-6">
                 <div className="flex items-start space-x-3 sm:space-x-4">
@@ -98,8 +97,8 @@ const Contact = () => {
 
               {/* Social Media */}
               <div className="border-t border-border pt-4 sm:pt-6">
-                <h4 className="font-semibold text-foreground mb-4 text-sm sm:text-base">Redes Sociais</h4>
-                <div className="flex space-x-3 sm:space-x-4">
+                <h4 className="font-semibold text-foreground mb-4 text-sm sm:text-base text-center">Redes Sociais</h4>
+                <div className="flex justify-center space-x-3 sm:space-x-4">
                   <a 
                     href="#" 
                     className="w-8 h-8 sm:w-10 sm:h-10 bg-orange-100 hover:bg-orange-600 hover:text-white text-orange-600 rounded-lg flex items-center justify-center transition-colors"
@@ -138,14 +137,6 @@ const Contact = () => {
                 >
                   Enviar E-mail
                 </a>
-              </div>
-            </div>
-
-            {/* Map */}
-            <div className="space-y-4 sm:space-y-6">
-              <h3 className="text-xl sm:text-2xl font-bold text-foreground">Localização</h3>
-              <div className="h-64 sm:h-80 lg:h-96">
-                <ContactMap />
               </div>
             </div>
           </div>
