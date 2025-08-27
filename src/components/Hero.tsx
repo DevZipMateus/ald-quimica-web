@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { ArrowRight, Award, Clock, Shield } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -69,8 +68,13 @@ const Hero = () => {
                 href="https://wa.me/5519988788452"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center h-11 px-6 sm:px-8 bg-white/10 text-foreground border border-orange-600/60 hover:bg-orange-600 hover:text-white hover:border-orange-600 transition-all duration-300 rounded-md font-medium w-full sm:w-auto"
+                className="inline-flex items-center justify-center h-11 px-6 sm:px-8 bg-white/10 text-foreground border border-orange-600/60 hover:bg-orange-600 hover:text-white hover:border-orange-600 transition-all duration-300 rounded-md font-medium w-full sm:w-auto gap-2"
               >
+                <img 
+                  src="/lovable-uploads/da61b6e2-e3db-4e7c-8fc3-ac2e51a8bbe7.png" 
+                  alt="WhatsApp" 
+                  className="w-5 h-5"
+                />
                 WhatsApp
               </a>
             </div>

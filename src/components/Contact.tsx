@@ -52,8 +52,13 @@ const Contact = () => {
                         href="https://wa.me/5519988788452" 
                         target="_blank" 
                         rel="noopener noreferrer"
-                        className="hover:text-orange-600 transition-colors"
+                        className="hover:text-orange-600 transition-colors flex items-center gap-1 mt-1"
                       >
+                        <img 
+                          src="/lovable-uploads/da61b6e2-e3db-4e7c-8fc3-ac2e51a8bbe7.png" 
+                          alt="WhatsApp" 
+                          className="w-4 h-4"
+                        />
                         (19) 98878-8452 - WhatsApp
                       </a>
                     </p>
@@ -118,8 +123,13 @@ const Contact = () => {
                   href="https://wa.me/5519988788452"
                   target="_blank"
                   rel="noopener noreferrer" 
-                  className="w-full inline-flex items-center justify-center h-11 sm:h-12 px-6 bg-orange-600 hover:bg-orange-700 text-white rounded-lg font-medium transition-colors text-sm sm:text-base"
+                  className="w-full inline-flex items-center justify-center h-11 sm:h-12 px-6 bg-orange-600 hover:bg-orange-700 text-white rounded-lg font-medium transition-colors text-sm sm:text-base gap-2"
                 >
+                  <img 
+                    src="/lovable-uploads/da61b6e2-e3db-4e7c-8fc3-ac2e51a8bbe7.png" 
+                    alt="WhatsApp" 
+                    className="w-5 h-5"
+                  />
                   Falar no WhatsApp
                 </a>
                 <a 

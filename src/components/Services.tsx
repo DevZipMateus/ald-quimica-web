@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Sparkles, Wrench, Recycle, Shield } from 'lucide-react';
 
@@ -117,8 +116,13 @@ const Services = () => {
                 href="https://wa.me/5519988788452"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center h-11 px-6 sm:px-8 bg-white text-orange-600 hover:bg-orange-50 transition-colors rounded-md font-medium text-sm sm:text-base"
+                className="inline-flex items-center justify-center h-11 px-6 sm:px-8 bg-white text-orange-600 hover:bg-orange-50 transition-colors rounded-md font-medium text-sm sm:text-base gap-2"
               >
+                <img 
+                  src="/lovable-uploads/da61b6e2-e3db-4e7c-8fc3-ac2e51a8bbe7.png" 
+                  alt="WhatsApp" 
+                  className="w-5 h-5"
+                />
                 Solicitar Consultoria
               </a>
             </div>
