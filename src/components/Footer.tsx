@@ -126,7 +126,7 @@ const Footer = () => {
 
         <div className="border-t border-background/20 mt-6 sm:mt-8 pt-6 sm:pt-8 text-center text-xs sm:text-sm text-muted">
           <p>
-            © 2024 ALD Indústria e Comércio de Produtos Químicos Ltda. 
+            © 2025 ALD Indústria e Comércio de Produtos Químicos Ltda. 
             CNPJ: 40.015.668/0001-27. Todos os direitos reservados.
           </p>
         </div>
