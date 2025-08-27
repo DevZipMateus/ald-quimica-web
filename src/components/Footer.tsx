@@ -16,10 +16,12 @@ const Footer = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
           {/* Company Info */}
           <div className="space-y-4 sm:col-span-2 lg:col-span-1">
-            <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-orange-600 rounded-lg flex items-center justify-center text-white font-bold">
-                A
-              </div>
+            <div className="flex items-center space-x-3">
+              <img 
+                src="/lovable-uploads/9fd655b0-24cf-4fcd-bc3d-4589d709e69e.png" 
+                alt="ALD Química Logo" 
+                className="w-10 h-10 sm:w-12 sm:h-12"
+              />
               <span className="font-bold text-base sm:text-lg">ALD Química</span>
             </div>
             <p className="text-muted text-sm">
