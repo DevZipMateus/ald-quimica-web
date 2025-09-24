@@ -52,46 +52,46 @@ const Services = () => {
   ];
 
   return (
-    <section id="servicos" className="py-12 sm:py-16 lg:py-20 bg-background">
+    <section id="servicos" className="py-8 sm:py-12 md:py-16 lg:py-20 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
-          <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4">
+          <div className="text-center mb-8 sm:mb-12 md:mb-16">
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-3 sm:mb-4">
               Nossos Serviços
             </h2>
-            <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-xl lg:max-w-2xl mx-auto">
               Soluções completas em galvanoplastia com qualidade e tecnologia de ponta
             </p>
           </div>
 
           {/* Services Grid */}
-          <div className="grid md:grid-cols-2 gap-6 sm:gap-8">
+          <div className="grid md:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
             {serviceCategories.map((category, index) => {
               const IconComponent = category.icon;
               return (
                 <div key={index} className="bg-card border border-border rounded-lg p-4 sm:p-6 hover:shadow-lg transition-shadow">
                   <div className="flex items-start space-x-3 sm:space-x-4">
-                    <div className={`w-10 h-10 sm:w-12 sm:h-12 rounded-lg flex items-center justify-center flex-shrink-0 ${
+                    <div className={`w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-lg flex items-center justify-center flex-shrink-0 ${
                       category.color === 'orange' ? 'bg-orange-100' :
                       category.color === 'slate' ? 'bg-slate-100' :
                       category.color === 'blue' ? 'bg-blue-100' : 'bg-green-100'
                     }`}>
-                      <IconComponent className={`w-5 h-5 sm:w-6 sm:h-6 ${
+                      <IconComponent className={`w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 ${
                         category.color === 'orange' ? 'text-orange-600' :
                         category.color === 'slate' ? 'text-slate-600' :
                         category.color === 'blue' ? 'text-blue-600' : 'text-green-600'
                       }`} />
                     </div>
                     <div className="flex-1 min-w-0">
-                      <h3 className="text-lg sm:text-xl font-bold text-foreground mb-3 sm:mb-4">
+                      <h3 className="text-base sm:text-lg md:text-xl font-bold text-foreground mb-2 sm:mb-3 md:mb-4">
                         {category.title}
                       </h3>
-                      <ul className="space-y-2">
+                      <ul className="space-y-1 sm:space-y-2">
                         {category.items.map((item, itemIndex) => (
                           <li key={itemIndex} className="flex items-start space-x-2">
-                            <div className="w-1.5 h-1.5 bg-orange-600 rounded-full mt-2 flex-shrink-0"></div>
-                            <span className="text-sm sm:text-base text-muted-foreground">{item}</span>
+                            <div className="w-1.5 h-1.5 bg-orange-600 rounded-full mt-1.5 sm:mt-2 flex-shrink-0"></div>
+                            <span className="text-xs sm:text-sm md:text-base text-muted-foreground">{item}</span>
                           </li>
                         ))}
                       </ul>
@@ -103,12 +103,12 @@ const Services = () => {
           </div>
 
           {/* CTA */}
-          <div className="text-center mt-8 sm:mt-12">
-            <div className="bg-gradient-to-r from-orange-500 to-orange-600 rounded-2xl p-6 sm:p-8 text-white">
-              <h3 className="text-xl sm:text-2xl font-bold mb-4">
+          <div className="text-center mt-6 sm:mt-8 md:mt-12">
+            <div className="bg-gradient-to-r from-orange-500 to-orange-600 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 text-white">
+              <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-3 sm:mb-4">
                 Precisa de uma solução personalizada?
               </h3>
-              <p className="text-orange-100 mb-6 max-w-2xl mx-auto text-sm sm:text-base">
+              <p className="text-orange-100 mb-4 sm:mb-6 max-w-lg md:max-w-2xl mx-auto text-xs sm:text-sm md:text-base">
                 Nossa equipe técnica especializada pode desenvolver processos específicos 
                 para suas necessidades. Entre em contato conosco!
               </p>
@@ -116,12 +116,12 @@ const Services = () => {
                 href="https://wa.me/5519988788452"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center h-11 px-6 sm:px-8 bg-white text-orange-600 hover:bg-orange-50 transition-colors rounded-md font-medium text-sm sm:text-base gap-2"
+                className="inline-flex items-center justify-center h-10 sm:h-11 px-4 sm:px-6 md:px-8 bg-white text-orange-600 hover:bg-orange-50 transition-colors rounded-md font-medium text-xs sm:text-sm md:text-base gap-2"
               >
                 <img 
                   src="/lovable-uploads/da61b6e2-e3db-4e7c-8fc3-ac2e51a8bbe7.png" 
                   alt="WhatsApp" 
-                  className="w-5 h-5"
+                  className="w-4 h-4 sm:w-5 sm:h-5"
                 />
                 Solicitar Consultoria
               </a>

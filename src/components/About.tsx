@@ -4,24 +4,24 @@ import { Factory, Users, Target, TrendingUp } from 'lucide-react';
 
 const About = () => {
   return (
-    <section id="sobre" className="py-12 sm:py-16 lg:py-20 bg-muted/30">
+    <section id="sobre" className="py-8 sm:py-12 md:py-16 lg:py-20 bg-muted/30">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
-          <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4">
+          <div className="text-center mb-8 sm:mb-12 md:mb-16">
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-3 sm:mb-4">
               Sobre a ALD Química
             </h2>
-            <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-xl lg:max-w-2xl mx-auto">
               Conheça nossa história de inovação e excelência na indústria de galvanoplastia
             </p>
           </div>
 
           {/* Story */}
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-12 sm:mb-16">
-            <div className="space-y-6 order-2 lg:order-1">
-              <h3 className="text-xl sm:text-2xl font-bold text-foreground">Nossa História</h3>
-              <div className="space-y-4 text-sm sm:text-base text-muted-foreground">
+          <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 md:gap-10 lg:gap-12 items-center mb-8 sm:mb-12 md:mb-16">
+            <div className="space-y-4 sm:space-y-6 order-2 lg:order-1">
+              <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-foreground">Nossa História</h3>
+              <div className="space-y-3 sm:space-y-4 text-sm sm:text-base text-muted-foreground">
                 <p>
                   Com uma trajetória de 30 anos na indústria de Galvanoplastia de bijouterias, 
                   <strong className="text-foreground"> Antônio Libero Dioto</strong> iniciou as atividades 
@@ -40,12 +40,12 @@ const About = () => {
               </div>
             </div>
             
-            <div className="bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl p-6 sm:p-8 text-white order-1 lg:order-2">
-              <div className="space-y-6">
-                <Factory className="w-10 h-10 sm:w-12 sm:h-12" />
+            <div className="bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 text-white order-1 lg:order-2">
+              <div className="space-y-4 sm:space-y-6">
+                <Factory className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12" />
                 <div>
-                  <h4 className="text-lg sm:text-xl font-bold mb-2">30 Anos de Experiência</h4>
-                  <p className="text-orange-100 text-sm sm:text-base">
+                  <h4 className="text-base sm:text-lg md:text-xl font-bold mb-2">30 Anos de Experiência</h4>
+                  <p className="text-orange-100 text-xs sm:text-sm md:text-base">
                     Três décadas de expertise em galvanoplastia de bijouterias, 
                     garantindo conhecimento técnico aprofundado e soluções inovadoras.
                   </p>
@@ -55,35 +55,35 @@ const About = () => {
           </div>
 
           {/* Values */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-            <div className="text-center space-y-4">
-              <div className="w-14 h-14 sm:w-16 sm:h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto">
-                <Target className="w-7 h-7 sm:w-8 sm:h-8 text-orange-600" />
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
+            <div className="text-center space-y-3 sm:space-y-4">
+              <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto">
+                <Target className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-orange-600" />
               </div>
-              <h3 className="text-lg sm:text-xl font-bold text-foreground">Missão</h3>
-              <p className="text-sm sm:text-base text-muted-foreground">
+              <h3 className="text-base sm:text-lg md:text-xl font-bold text-foreground">Missão</h3>
+              <p className="text-xs sm:text-sm md:text-base text-muted-foreground">
                 Fornecer produtos químicos de alta qualidade para galvanoplastia, 
                 garantindo satisfação e resultados excepcionais para nossos clientes.
               </p>
             </div>
             
-            <div className="text-center space-y-4">
-              <div className="w-14 h-14 sm:w-16 sm:h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto">
-                <TrendingUp className="w-7 h-7 sm:w-8 sm:h-8 text-orange-600" />
+            <div className="text-center space-y-3 sm:space-y-4">
+              <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto">
+                <TrendingUp className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-orange-600" />
               </div>
-              <h3 className="text-lg sm:text-xl font-bold text-foreground">Visão</h3>
-              <p className="text-sm sm:text-base text-muted-foreground">
+              <h3 className="text-base sm:text-lg md:text-xl font-bold text-foreground">Visão</h3>
+              <p className="text-xs sm:text-sm md:text-base text-muted-foreground">
                 Ser a empresa líder em inovação e qualidade no setor de produtos 
                 químicos para galvanoplastia no Brasil.
               </p>
             </div>
             
-            <div className="text-center space-y-4 sm:col-span-2 lg:col-span-1">
-              <div className="w-14 h-14 sm:w-16 sm:h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto">
-                <Users className="w-7 h-7 sm:w-8 sm:h-8 text-orange-600" />
+            <div className="text-center space-y-3 sm:space-y-4 sm:col-span-2 lg:col-span-1">
+              <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto">
+                <Users className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-orange-600" />
               </div>
-              <h3 className="text-lg sm:text-xl font-bold text-foreground">Valores</h3>
-              <p className="text-sm sm:text-base text-muted-foreground">
+              <h3 className="text-base sm:text-lg md:text-xl font-bold text-foreground">Valores</h3>
+              <p className="text-xs sm:text-sm md:text-base text-muted-foreground">
                 Qualidade, inovação, segurança e compromisso com a satisfação 
                 do cliente são os pilares que guiam nossa empresa.
               </p>
