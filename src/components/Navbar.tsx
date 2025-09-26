@@ -39,7 +39,7 @@ const Navbar = () => {
           {/* Logo */}
           <div className="flex items-center space-x-3">
             <img 
-              src="/lovable-uploads/9fd655b0-24cf-4fcd-bc3d-4589d709e69e.png" 
+              src="/logo.jpg" 
               alt="ALD Química Logo" 
               className="w-10 h-10 sm:w-12 sm:h-12"
             />

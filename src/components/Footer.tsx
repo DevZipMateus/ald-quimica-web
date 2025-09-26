@@ -18,7 +18,7 @@ const Footer = () => {
           <div className="space-y-3 sm:space-y-4 sm:col-span-2 lg:col-span-1">
             <div className="flex items-center space-x-2 sm:space-x-3">
               <img 
-                src="/lovable-uploads/9fd655b0-24cf-4fcd-bc3d-4589d709e69e.png" 
+                src="/logo.jpg" 
                 alt="ALD Química Logo" 
                 className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12"
               />
