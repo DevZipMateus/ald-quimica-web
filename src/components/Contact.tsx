@@ -89,7 +89,10 @@ const Contact = () => {
                     <h4 className="font-semibold text-foreground mb-1 text-sm sm:text-base">Horário de Funcionamento</h4>
                     <p className="text-muted-foreground text-sm sm:text-base">
                       Segunda a Quinta-feira<br />
-                      das 7:30 às 17:30
+                      das 7:30 às 17:30<br />
+                      <br />
+                      Sexta-feira<br />
+                      das 7:30 às 16:30
                     </p>
                   </div>
                 </div>
