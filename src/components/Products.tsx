@@ -101,7 +101,7 @@ const Products = () => {
       icon: Zap,
       title: "Processos Intermediários",
       items: [
-        "Cobre Ácido Brilhante ALD"
+        "COBRE ÁCIDO BRILHANTE ALD"
       ]
     },
     {
