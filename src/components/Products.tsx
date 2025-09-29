@@ -101,7 +101,11 @@ const Products = () => {
       icon: Zap,
       title: "Processos Intermediários",
       items: [
-        "COBRE ÁCIDO BRILHANTE ALD"
+        "COBRE ALCALINO ALD",
+        "COBRE ÁCIDO BRILHANTE ALD",
+        "NÍQUEL BRILHANTE ALD",
+        "NÍQUEL GRAFITE ALD",
+        "NÍQUEL FREE NEW WHITE ALD"
       ]
     },
     {
