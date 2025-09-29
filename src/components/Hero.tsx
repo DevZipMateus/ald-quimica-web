@@ -24,9 +24,9 @@ const Hero = () => {
                   Garantida
                 </span>
               </h1>
-              <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-xl lg:max-w-2xl mx-auto lg:mx-0">
-                Com 4 anos de mercado, somos referência em qualidade e satisfação na produção e distribuição de produtos químicos para galvanoplastia. Uma empresa inovadora com estrutura técnica e laboratorial.
-              </p>
+               <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-xl lg:max-w-2xl mx-auto lg:mx-0">
+                 Com 5 anos de mercado, somos referência em qualidade e satisfação na produção e distribuição de produtos químicos para galvanoplastia. Uma empresa inovadora com estrutura técnica e laboratorial.
+               </p>
             </div>
 
             {/* Stats */}
@@ -35,7 +35,7 @@ const Hero = () => {
                 <div className="flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-orange-100 rounded-lg mx-auto mb-1 sm:mb-2">
                   <Award className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-orange-600" />
                 </div>
-                <div className="text-lg sm:text-xl md:text-2xl font-bold text-foreground">4</div>
+                <div className="text-lg sm:text-xl md:text-2xl font-bold text-foreground">5</div>
                 <div className="text-xs sm:text-sm text-muted-foreground">Anos de Mercado</div>
               </div>
               <div className="text-center">
