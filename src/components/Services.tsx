@@ -22,6 +22,7 @@ const Services = () => {
       title: "Processos Intermediários",
       items: [
         "Cobre Alcalino ALD",
+        "Cobre Ácido Brilhante ALD",
         "Níquel Brilhante ALD",
         "Níquel Grafite ALD",
         "Níquel Free New White ALD"
